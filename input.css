@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.arrowIcon{
+  
+    appearance: none;
+    width:12px;
+    height:12px; 
+}
+.generateBtn:hover .arrowIcon{
+    filter: invert(82%) sepia(36%) saturate(405%) hue-rotate(70deg) brightness(105%) contrast(101%);
+}
+.copyIcon{
+  height: 20px;
+  width: 20px;
+  filter: invert(82%) sepia(36%) saturate(405%) hue-rotate(70deg) brightness(105%) contrast(101%);
+}
+.copyIcon:hover {
+  filter: invert();
+}
+.generateBtn:hover {
+    color: #a4ffaf;
+    border-radius: 2px;
+    border-color: green;
+    background-color: black;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: black;
+    width: 100%;
+    height: 8px;
+    opacity: 50%;
+    outline: none;
+    opacity: 0.7;
+   
+  }
+
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius:15px;
+    outline: 5px;
+    border: 5px;
+    outline-color: aquamarine;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .slider::-webkit-slider-thumb:hover{
+    border: 2px solid #83E584;
+    background: black;
+  }
+  .slider::-ms-fill-lower{
+    background: #a4ffaf;
+  }
+  .slider::-ms-fill-upper{
+    background: black;
+  }
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: 0;
+  
+    font: inherit;
+    color: black;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid white;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+  }
+  input[type="checkbox"]:hover{
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #a4ffaf;
+    background-color: #a4ffaf;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  
+  
+  
+  
