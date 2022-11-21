@@ -6,14 +6,10 @@ let randomSymbols = createArray(33, 47).concat(createArray(58, 64));
 let passwordRange = document.getElementById("passwordRange")
 function rangeValue(){
     valueOfRange= document.getElementById("passwordRange")
-   
     val = ((valueOfRange.value/2)*10-1);
-    console.log(val)
     passwordRange = document.getElementById("passwordRange").value
     document.getElementById("rangeDisplay").innerHTML = passwordRange;
-    valueOfRange.style.background ='linear-gradient(to right, #a4ffaf 0%, #a4ffaf ' + val + '%  , black '+ val +'%, black 100%)';
-    
-    
+    valueOfRange.style.background ='linear-gradient(to right, #a4ffaf 0%, #a4ffaf ' + val + '%  , black '+ val +'%, black 100%)'; 
     return(passwordRange)
 }
 
@@ -32,8 +28,6 @@ function rangeValue(){
     }
 
 }
-  
-
 
 function password(){
     let passwordDisplay = document.getElementById("passwordDisplay");
@@ -48,11 +42,9 @@ function password(){
     let strengthBarThree = document.getElementById("strengthBarThree")
     let strengthBarFour = document.getElementById("strengthBarFour")
 
-
     let finalPassword = generatePassword(passwordRange,isUpperCase,isLowerCase,isNumbers,isSymbols,StrengthDisplay);
-      passwordDisplay.innerHTML = finalPassword
+    passwordDisplay.innerHTML = finalPassword
     
-     
     let upper = finalPassword.match(/[A-Z]/)
     let lower = finalPassword.match(/[a-z]/)
     let num = finalPassword.match(/[0-9]/)
@@ -93,34 +85,27 @@ function password(){
             strengthBarThree.style.backgroundColor="yellow"
             strengthBarFour.style.backgroundColor="yellow"
         }
-        
     }
 }
 
 function generatePassword(passwordRange,isUpperCase,isLowerCase,isNumbers,isSymbols){
     let valueArray = []
   
-
    if(!isLowerCase && !isUpperCase && !isNumbers && !isSymbols){
     return ("Select Any Fields")
     
-   
    }else {
             if(isLowerCase){
             valueArray = randomLower
-            
             }
             if(isUpperCase){
                 valueArray = valueArray.concat(randomUpper)
-               
                 }
              if(isNumbers){
             valueArray = valueArray.concat(randomNumber)
-           
             }
             if(isSymbols){
                 valueArray = valueArray.concat(randomSymbols)
-              
                 }
         let passwordArray = [];
         for(let i = 0; i < passwordRange; i++){
@@ -128,15 +113,9 @@ function generatePassword(passwordRange,isUpperCase,isLowerCase,isNumbers,isSymb
            passwordArray.push(String.fromCharCode(characters))
            
         } 
-        
-     
     return passwordArray.join("")
          }
-   
 }
-
-
-
 
 function createArray(low,high){
     let array = []
